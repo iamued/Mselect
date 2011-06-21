@@ -80,17 +80,6 @@ function initSelect(selectData, areaSid, cateSid){
 }
 
 /*
- * 初始化列表 无条件将所有数据填充
- * @param {Object} sdata
- * @param {Object} listid
- */
-function initList(sdata, listid){
-    for (var i = 0; i <= sdata.length; i++) {
-        jQuery(listid).jqGrid('addRowData', i + 1, sdata[i]);
-    }
-}
-
-/*
  *绑定查询按钮事件
  * @param {Object} btnid
  * @param {Object} areaselId
