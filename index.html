@@ -1,1 +1,123 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>	<title>推广学校查询器</title>	<meta charset="UTF-8">	    <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />        <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui-1.8.1.custom.css" />        <script src="js/jquery-1.4.2.min.js" type="text/javascript">        </script>        <script src="js/grid.locale-en.js" type="text/javascript">        </script>        <script src="js/jquery.jqGrid.min.js" type="text/javascript">        </script>        <script src="js/jquery.scrollTo-min.js" type="text/javascript">        </script>		<script src="js/main.js" type="text/javascript">        </script>		<script src="data/school.data.js" type="text/javascript">        </script>		</head><body>	<h1>推广学校查询器</h1>	<div style="float:left; width:200px;">		<h2>按地区查询</h2>		<p><lable>地区:</lable><select id="Aareaselect"><option value="null">不限</option></select></p>		<p><lable>项目:</lable><select id="Acateselect"><option value="null">请选择</option></select></p>		<p><input type="button" value="查询" id="searchArea"></p>	</div>	<div style="float:left;">		<h2>按项目查询</h2>		<p><lable>项目:</lable><select id="Ccateselect"><option value="null">不限</option></select></p>		<p><lable>地区:</lable><select id="Careaselect"><option value="null">请选择</option></select></p>		<p><input type="button" value="查询" id="searchCate"></p>	</div>	<span style="clear:both;display:block"></span>	<div>		<table id="schoollist"></table>	</div>	<script type="text/javascript">		/*页面初始化js*/		jQuery("#schoollist").jqGrid({                datatype: "local",                height: 300,                colNames: ['学校名称','地域', '项目', '单价','电话','备注'],                colModel: [{                    name: 'sname',                    index: 'sname',                    width: 200,                    sortable: false,					hidden:false                },{                    name: 'sarea',                    index: 'sarea',                    width: 100,                    sortable: false                }, {                    name: 'scate',                    index: 'scate',                    width: 150,                    sortable: false                },   {                    name: 'sprice',                    index: 'sprice',                    width: 80,                    sortable: true,					sorttype:"float"					                }, {                    name: 'stel',                    index: 'stel',                    width: 150,                    align: "right",                    sortable: false                }, {                    name: 'snote',                    index: 'snote',                    width: 250,                    sortable: false                }],                multiselect: false,                caption: "查询结果"            });						var areaArr=initdata(sdata,"cate");			initSelect(initdata(sdata,"area"),"#Aareaselect","#Acateselect");			initSelect(initdata(sdata,"cate"),"#Ccateselect","#Careaselect");			initList(sdata,"#schoollist");			initSearch("#searchArea","#Aareaselect","#Acateselect");			initSearch("#searchCate","#Careaselect","#Ccateselect");	</script></body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>推广学校查询器</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui-1.8.1.custom.css" />
+        <script src="js/jquery-1.4.2.min.js" type="text/javascript">
+        </script>
+        <script src="js/grid.locale-en.js" type="text/javascript">
+        </script>
+        <script src="js/jquery.jqGrid.min.js" type="text/javascript">
+        </script>
+        <script src="js/jquery.scrollTo-min.js" type="text/javascript">
+        </script>
+        <script src="js/main.js" type="text/javascript">
+        </script>
+        <script src="data/school.data.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>推广学校查询器</h1>
+        <div style="float:left; width:200px;">
+            <h2>按地区查询</h2>
+            <p>
+                <lable>
+                    地区:
+                </lable>
+                <select id="Aareaselect">
+                    <option value="null">不限</option>
+                </select>
+            </p>
+            <p>
+                <lable>
+                    项目:
+                </lable>
+                <select id="Acateselect">
+                    <option value="null">请选择</option>
+                </select>
+            </p>
+            <p>
+                <input type="button" value="查询" id="searchArea">
+            </p>
+        </div>
+        <div style="float:left;">
+            <h2>按项目查询</h2>
+            <p>
+                <lable>
+                    项目:
+                </lable>
+                <select id="Ccateselect">
+                    <option value="null">不限</option>
+                </select>
+            </p>
+            <p>
+                <lable>
+                    地区:
+                </lable>
+                <select id="Careaselect">
+                    <option value="null">请选择</option>
+                </select>
+            </p>
+            <p>
+                <input type="button" value="查询" id="searchCate">
+            </p>
+        </div><span style="clear:both;display:block"></span>
+        <div>
+            <table id="schoollist">
+            </table>
+        </div>
+        <script type="text/javascript">
+            /*页面初始化js*/
+            jQuery("#schoollist").jqGrid({
+                datatype: "local",
+                height: 300,
+                colNames: ['学校名称', '地域', '项目', '单价', '电话', '备注'],
+                colModel: [{
+                    name: 'sname',
+                    index: 'sname',
+                    width: 200,
+                    sortable: false,
+                    hidden: false
+                }, {
+                    name: 'sarea',
+                    index: 'sarea',
+                    width: 100,
+                    sortable: false
+                }, {
+                    name: 'scate',
+                    index: 'scate',
+                    width: 150,
+                    sortable: false
+                }, {
+                    name: 'sprice',
+                    index: 'sprice',
+                    width: 80,
+                    sortable: true,
+                    sorttype: "float"
+                
+                }, {
+                    name: 'stel',
+                    index: 'stel',
+                    width: 150,
+                    align: "left",
+                    sortable: false
+                }, {
+                    name: 'snote',
+                    index: 'snote',
+                    width: 250,
+                    sortable: false
+                }],
+                multiselect: false,
+                caption: "查询结果"
+            });
+            
+            initSelect(initdata(sdata, "area"), "#Aareaselect", "#Acateselect");
+            initSelect(initdata(sdata, "cate"), "#Ccateselect", "#Careaselect");
+            initList(sdata, "#schoollist");
+            initSearch("#searchArea", "#Aareaselect", "#Acateselect");
+            initSearch("#searchCate", "#Careaselect", "#Ccateselect");
+        </script>
+    </body>
+</html>
