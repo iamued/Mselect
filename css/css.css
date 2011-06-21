@@ -1,0 +1,243 @@
+td,yy       {
+	font-size: 12px;
+	word-spacing: normal;
+	line-height: 180%;
+	color: #666B74;
+	font-family: "Arial", "Helvetica", "sans-serif";
+
+}
+A:link {
+	font-size:12px;
+	color: #5178A5;
+	line-height: 140%;
+	text-decoration: none;
+
+}
+A:visited    {
+	text-decoration: none;
+	font-size: 12px;
+	color: #5178A5;
+	line-height: 140%;
+
+}
+A:hover    {
+	color:  #C80800;
+	font-size: 12px;
+	line-height: 140%;
+	text-decoration: underline;
+
+}
+
+.l1 {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: #5178A5;
+}
+.l1:link {
+	COLOR: #5178A5;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.l1:visited {
+	color: #5178A5;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.l1:hover {
+	COLOR: #C80800;
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.l2 {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5178A5;
+}
+.l2:link {
+	COLOR: #5178A5;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.l2:visited {
+	color: #5178A5;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.l2:hover {
+	COLOR: #C80800;
+	font-size: 14px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.b {
+	text-decoration: underline;
+	font-size: 12px;
+	font-weight: normal;
+	color: #0190CB;
+	font-family: "Arial", "Helvetica", "sans-serif";
+
+}
+.b:link {
+	COLOR: #BFC7D8;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	font-family: "Arial", "Helvetica", "sans-serif";
+
+}
+.b:visited {
+	color: #BFC7D8;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	font-family: "Arial", "Helvetica", "sans-serif";
+
+
+}
+.b:hover {
+	COLOR: #C80800;
+	font-size: 12px;
+	text-decoration: underline;
+	font-weight: normal;
+	font-family: "Arial", "Helvetica", "sans-serif";
+
+}
+
+.wb {
+	font-size: 14px;
+	font-weight: bold;
+	color: #AEB1B5;
+}
+
+
+.wb2 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 14px;
+	font-weight: bold;
+	color: #666B74;
+	line-height: 300%;
+
+}
+.lb {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0190CB;
+}
+
+.date {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #989898;
+}
+.wj {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.kj {
+	font-size: 14px;
+	font-weight: bold;
+	color: #5178A5;
+}
+.sec_menu  {
+	overflow:hidden;
+	border: none;
+
+}
+.w {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.ttitle {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	font-weight: normal;
+	color: #5178A5;
+
+}
+.ttext {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 14px;
+}
+.form {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	background-color:  #EFFCFE;
+	height: 23px;
+	width: 150px;
+	border: 1px solid #0099CC;
+
+}
+.form2 {
+	background-color:  #EFFCFE;
+	width: 150px;
+	border: 0px 0;
+}
+.form3 {
+	background-color:  #EFFCFE;
+	width: 600px;
+	border: 1px solid #000000;
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+
+
+}
+.form4{
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	background-color: #EFFCFE;
+	height: 20px;
+	width: 80px;
+}
+.form5 {
+	background-color:  #EFFCFE;
+	width: 780px;
+	border: 1px solid #006699;
+}
+.form6 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	background-color:  #EFFCFE;
+	height: 22px;
+	width: 250px;
+	border: 1px solid #6699CC;
+	margin: 1px;
+	padding-top: 4px;
+	padding-left: 4px;
+
+
+
+
+}
+.button {
+	line-height: 140%;
+	background-color: #972620;
+	height: 20px;
+	width: 60px;
+	border: 1px solid #841610;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.ff {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 150%;
+
+
+}
